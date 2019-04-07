@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="img/paper.png"/>
+    <script defer src="js/socketio.js"></script>
+    <script defer src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>RPS - Multiplayer</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="login-container">
+            <div class="header">
+                <img src="img/logo.svg" alt="">
+                <h2>Enter your name to play!</h2>
+            </div>
+            <div class="content">
+                <input maxlength="15" type="text" placeholder="TheLegend27">
+                <button id="login" class="btn"><span>Join the game!</span></button>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="header">
+                <h1>RPS Multiplayer</h1> <img src="img/challenge.svg" alt="">
+            </div>
+            <div class="user-list">
+            </div>
+        </div>
+    </main>
+
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <h2></h2>
+            <p></p>
+            <div class="actions">
+                <button id="hideErr">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="challenged-modal" class="modal">
+        <div class="modal-content">
+            <h2></h2>
+            <p>Either deny or accept this duel.</p>
+            <div class="actions">
+                <button id="AcceptChallenge">Accept</button>
+                <button id="DeclineChallenge">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <div class="vs">
+                <div class="pick">
+                    <div class="icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <p>You</p>
+                </div>
+                    <h2>Vs</h2>
+                <div class="pick">
+                    <div class="icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <p id="enemy">enemy_name</p>
+                </div>
+            </div>
+            <div class="pick-row">
+                <i data-id="0" class="far fa-hand-rock"></i>
+                <i data-id="1" class="far fa-hand-paper"></i>
+                <i data-id="2" class="far fa-hand-scissors"></i>
+            </div>
+
+            <div class="actions">
+                <button id="AcceptChallenge" disabled>Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

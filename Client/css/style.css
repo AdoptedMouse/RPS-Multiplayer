@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+}
+
+/* error modal */
+#error-modal .modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 3px solid #eb6060;
+}
+
+#error-modal .modal-content p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#error-modal .modal-content button {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #43465f;
+    transition: .3s box-shadow;
+    border: 0;
+}
+
+/* Challenged modal */
+#challenged-modal {
+    display: none;
+}
+
+#challenged-modal h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 27px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #60d6eb;
+}
+
+#challenged-modal p {
+    text-align: center;
+}
+
+#challenged-modal .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+#challenged-modal button {
+    transition: .3s box-shadow;
+    cursor: pointer;
+    padding: 5px;
+    border: 0;
+    font-size: 16px;
+    color: white;
+}
+
+#challenged-modal button:first-child {
+    background-color: #56c056;
+}
+
+#challenged-modal button:last-child {
+    background-color: #bd5e5e;
+}
+
+/* Game modal */
+#game-modal {
+    display: none;
+}
+
+#game-modal .vs {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    align-items: center;
+    max-width: 350px;
+    justify-content: space-between;
+}
+
+#game-modal h2 {
+    font-size: 45px;
+    color: #eb6060;
+}
+
+#game-modal .vs .pick p {
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#game-modal .vs .pick .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+}
+
+#game-modal .vs .pick i {
+    font-size: 75px;
+}
+
+#game-modal .pick-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 75px;
+}
+
+#game-modal .pick-row i {
+    transition: .3s color;
+}
+
+#game-modal .pick-row .picked{
+    color: #489baa;
+}
+
+#game-modal .pick-row i:hover {
+    cursor: pointer;
+    color: #489baa;
+}
+
+#game-modal button[disabled] {
+    display: none;
+}
+
+#game-modal .pick-row h3 {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+}
+
+#game-modal button {
+    background-color: #43465f;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+    transition: .3s box-shadow;
+    cursor: pointer;
+    padding: 5px;
+    border: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.game-container {
+    margin-top: 50px;
+    display: none;
+}
+
+.game-container h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 35px;
+    margin-right: 25px;
+}
+
+.game-container .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.game-container .header img {
+    width: 100px;
+    height: 100px;;
+}
+
+.user-list .user {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    max-width: 425px;
+    max-height: 100px;
+    align-items: center;
+    background-color: #474747f0;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.user p {
+    text-transform: capitalize;
+}
+
+.user-list .user h3{
+    font-size: 25px;
+    font-weight: normal !important;
+}
+
+.user-list .user button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.user-list .user button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 125px;
+    border: 0;
+    background-color: #489baa;
+    border-radius: 4px;
+    color: white;
+    transition: .3s box-shadow;
+}
+
+.user button[disabled] {
+    cursor: not-allowed;
+}
+
+.user button[disabled]:hover img {
+    animation: swing 0s 1;
+}
+
+.user-list .user button:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.user button:hover img {
+    animation: swing .5s 1;
+}
+
+.user-info {
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 50px;
+    width: 125px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.user-info img {
+    width: 90px;
+    height: 90px;
+}
+
+
+.user-info p {
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(25deg)
+    }
+
+    50% {
+        transform: rotate(-25deg)
+    }
+
+    75% {
+        transform: rotate(25deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+    
+}
